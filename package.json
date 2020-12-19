@@ -2,7 +2,7 @@
   "name": "next-prismic-base",
   "version": "1.0.0",
   "engines": {
-    "node": "12.x"
+    "node": "15.x"
   },
   "license": "MIT",
   "scripts": {
