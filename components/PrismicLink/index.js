@@ -5,7 +5,6 @@ import PropTypes from 'prop-types'
 import Link from 'next/link'
 import { linkResolver } from 'lib/resolvers'
 import prismicLinkShape from 'shapes/prismic/link'
-import styles from './index.module.scss'
 
 const PrismicLink = ({ className, activeClassName, link, children }) => {
   const { link_type, url, target } = link
@@ -18,9 +17,8 @@ const PrismicLink = ({ className, activeClassName, link, children }) => {
     return (
       <Link href={href}>
         <a
-          className={classNames(styles.link, className, {
+          className={classNames(className, {
             [activeClassName]: isActive,
-            [styles.linkActive]: isActive,
           })}>
           {children}
         </a>
@@ -29,11 +27,7 @@ const PrismicLink = ({ className, activeClassName, link, children }) => {
   }
   const RegularLink = () => {
     return (
-      <a
-        className={classNames(styles.link, className)}
-        href={url}
-        target={target}
-        rel={target === '_blank' && 'noreferrer'}>
+      <a href={url} target={target} rel={target === '_blank' && 'noreferrer'}>
         {children}
       </a>
     )

@@ -1,6 +1,6 @@
 import 'normalize.css'
 import 'nprogress/nprogress.css'
-import '../styles/global.scss'
+import 'tailwindcss/tailwind.css'
 import PropTypes from 'prop-types'
 import NProgress from 'nprogress'
 import Router from 'next/router'
